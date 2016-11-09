@@ -1,0 +1,72 @@
+#|  hw#50
+    Yedoh Kang <kang.yedoh@gmail.com> period06
+    help from Ethan Cheng
+--------------------------------------------
+Structuring questions for recursive problems
+0  structure of the problem
+---------------------------
+0a. What problem are you asked to solve?
+    and What does "size" mean in the context of that problem?
+        What is the largest number in the list given?
+        There is no size of the problem, because we just trying to find the largest element in the list.
+
+0b. What samples will test the procedure and what answers are required?
+    You must know the expected answers, and tests should be the smallest useful ones.
+        '() -->
+        '(4) --> 4
+        '(1 2 3) --> 3
+
+0c. What information do you have to be told?
+    That is, what information has to be supplied as parameters?
+        The list, L
+
+0d. What is the structure of the answer you will produce?
+    That is, what will your function produce? A number? An integer? A Boolean? A list?
+        A number
+
+1   structure of the recursive solution
+---------------------------------------
+1a. What does Mr. Brooks know how to do? That is, what smaller version of your
+    problem will you ask Mr. Brooks to solve?
+        Mr. Brooks can answer "What is the maximum value of an element in a list
+        containing one fewer element than L?
+
+1b. What sub-problem will you ask Mr. Brooks to solve? and
+    How will you use Mr. Brooks's answer to construct your own?
+        Ask Mr. Brooks to find the maximum value of an elemtn in the one-element
+        shorter list that results from Boolean operators. Take the greater value
+        of a two element list.
+
+2  structure of the base case solution
+--------------------------------------
+2a.  What is the base case?  That is what is the smallest version of this problem that 
+     you are willing to answer? Equivalently, what is the smallest version that it makes 
+     any sense for me to ask you? 
+     You must be able to solve this smallest version without asking anything of Mr. Brooks.
+         '(), the null list.
+
+2b.  How can you solve the base case for this problem?
+         0
+
+
+end of structuring questions
+-------------------------------------------- |#
+
+
+(define maxoflist
+  (lambda (L)
+    (if (= (length L) 0)
+        0
+        (if (= (length L) 1)
+        (car L)
+        (maxoflist (cdr L))))))
+(display (maxoflist '(3 4 5))) (newline)
+(display "...should be 5") (newline)
+(display (maxoflist '(1 2))) (newline)
+(display "...should be 2")(newline)
+(display (maxoflist '())) (newline)
+(display "...should be 0") (newline)
+(display (maxoflist '(1))) (newline)
+(display "...should be 1")(newline)
+
+

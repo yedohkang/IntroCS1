@@ -1,0 +1,73 @@
+;  hw#26
+;  "Yedoh Kang" <kang.yedoh@gmail.com> period06
+;   worked with #?
+;   help from Benjamin Shen
+;   time started: 10:45
+;   time ended: 11:42
+
+; #1 predict
+; a. true
+; b. false
+; c. true
+; d. false
+; e. true
+
+(display (and (<= 3 4)(>= 4 3)))(newline)
+(display (and (<= 3 4)(>= 4 3)(> 3 4) ))(newline)
+(display (or (<= 3 4)(>= 4 3)(> 3 4) ))(newline)
+
+(define p (and (<= 3 4)(>= 4 3)))
+(display (not p))(newline)
+(display (not (not p)))(newline)
+
+; #2 which answer when?
+; MrsWhich returns #t if the parameter is a multiple of 12
+; and #f otherwise
+
+; #3 which answer when again?
+; DrWho returns #t if the parameter is any integer other than a multiple of 2
+; and #f if the parameter is a multiple of 2
+; not really understanding what you mean by a better name
+; because I have no creative juices, sorry
+
+; #4 hw25 calendar problem
+
+(define bwkYear
+  (lambda (serviceMonth)
+    (quotient serviceMonth 12)))
+
+(define bwkMonth
+  (lambda (serviceMonth)
+    (modulo serviceMonth 12)))
+
+(define year_monthsLater
+  (lambda (startYear startMonth plusMonths)
+    (bwkYear (+ (* 12 startYear) startMonth plusMonths))))
+
+(define month_monthsLater
+  (lambda (startYear startMonth plusMonths)
+    (bwkYear (+ startMonth plusMonths))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

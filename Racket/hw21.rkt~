@@ -1,0 +1,15 @@
+;  hw17
+;   "D. Holmes" <Mr@DavidMHolmes.net>
+
+(display "circleArea") (newline)
+; parameter(s) needed: the radius
+(define circleArea
+  (lambda (radius)
+    (* 3.14159265 radius radius)
+    )) ; end of lambda and define
+;tests
+; expecting 100*pi
+(display  (circlearea 10) )(newline)
+; expecting 9*pi, which is about 28
+(display  (circlearea 3) )(newline)
+(display "-----------------") (newline) (newline

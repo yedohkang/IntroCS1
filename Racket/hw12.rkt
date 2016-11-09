@@ -1,0 +1,7 @@
+(display "The seventh Fibonacci sequence number is")
+(newline)
+(/ (- (expt (/ (+ 1 (sqrt 5)) 2) 7) (expt (/ (- 1 (sqrt 5)) 2) 7)) (sqrt 5))
+(newline)
+(display "The tenth Fibonacci sequence number is")
+(newline)
+(/ (- (expt (/ (+ 1 (sqrt 5)) 2) 10) (expt (/ (- 1 (sqrt 5)) 2) 10)) (sqrt 5))

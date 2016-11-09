@@ -1,0 +1,13 @@
+; hw
+; Yedoh Kang <kang.yedoh@gmail.com> period06
+; worked with
+; help from
+; time started;
+
+(display "0. cardinal numbers vs. ordinal numbers")
+(newline)
+(display "     a. A cardinal number is a number denoting quantity. Examples: one, two, three, etc.")
+(newline)
+(display "     b. An ordinal number is a number that defines a thing's position in a series.
+                       Examples: first, second, third, etc.")
+(newline)
